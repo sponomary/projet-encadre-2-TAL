@@ -1,0 +1,221 @@
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Montserrat-Bold", sans-serif;
+}
+
+p {
+  color: #8f8f8f;
+}
+
+em {
+  color: #03506f;
+  font-weight: bold;
+}
+
+/* Headings */
+.big-heading {
+  font-family: "Montserrat-Black", sans-serif;
+  font-size: 3.5rem;
+  line-height: 1.5;
+  font-weight: 900;
+}
+
+.main-icon {
+  color: #ffff;
+
+}
+
+.section-heading {
+  font-size: 3rem;
+  line-height: 1.5;
+  font-weight: 700;
+}
+
+/* Containers */
+.container-fluid {
+  padding: 7% 15%;
+}
+
+/* Sections */
+.colored-section {
+  background-color: #00adb5;
+  color: #fff;
+}
+
+.white-section {
+  background-color: #fff;
+}
+
+/* Navigation Bar */
+.navbar {
+  padding: 0 0 4.5rem;
+}
+
+.navbar-brand {
+  font-family: "Ubuntu";
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.nav-item {
+  padding: 0 18px;
+}
+
+.nav-link {
+  font-size: 1.2rem;
+  font-family: "Montserrat-Light", sans-serif;
+}
+
+/* Buttons */
+.download-button {
+  margin: 5% 3% 5% 0;
+}
+
+/* Download Tables */
+.download-table a {
+  color: #14a2b8;
+}
+
+/* Présentation Section */
+.presentation p {
+  color: #fff;
+}
+
+.text-light {
+  font-weight: bold;
+}
+
+.presentation-card {
+  width: 18rem;
+  height: 18rem;
+}
+
+.bao-column {
+  padding: 10% 10%;
+}
+
+.bao-section {
+  text-align: center;
+}
+
+.bao-section h3 {
+  color: #00adb5;
+}
+
+#title {
+  background-color: #00adb5;
+  color: #fff;
+  text-align: left;
+}
+
+#title .container-fluid {
+  padding: 3% 15% 7%;
+}
+
+/* BaO 1 Section */
+.code-snippet {
+  background-color: #F7F7F7;
+  display: inline-block;
+  margin-left: 2px;
+  width: 800px;
+  vertical-align: top;
+}
+
+.rubrique {
+  color: #8f8f8f;
+}
+
+/* BaO2 Section */
+#bao2 {
+  background-color: #a3ddcb;
+}
+
+#bao2 p {
+  color: #555;
+}
+
+/* BaO3 Section */
+.function-list {
+  color: #8f8f8f;
+}
+
+/* Conclusion Section */
+
+/* Tools Section */
+#tools {
+  position: relative;
+}
+
+.feature-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.feature-box {
+  padding: 4.5%;
+}
+
+.icon {
+  color: #03506f;
+  margin-bottom: 1rem;
+}
+
+.icon:hover {
+  color: #00adb5;
+}
+
+/* Footer Section */
+#footer {
+  text-align: center;
+}
+
+.social-icon {
+  margin: 20px 10px;
+}
+
+/* Button to top */
+
+#button {
+  display: inline-block;
+  background-color: #03506f;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  border-radius: 4px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  transition: background-color .3s,
+    opacity .5s, visibility .5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+}
+#button::after {
+  content: "\f077";
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 2em;
+  line-height: 50px;
+  color: #fff;
+}
+#button:hover {
+  cursor: pointer;
+  background-color: grey;
+}
+#button:active {
+  background-color: #555;
+}
+#button.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+@media (max-width: 1028px) {
+  #title {
+    text-align: center;
+  }

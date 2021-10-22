@@ -1,0 +1,1241 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <title>Projet encadré</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+    rel="stylesheet">
+
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/xcode.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Font Awesome -->
+  <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+
+  <!-- Bootstrap Scripts -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+  <!-- Syntax Highlight -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
+  <script>
+    hljs.highlightAll();
+  </script>
+
+  <!-- JQuery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="js/to-top.js"></script>
+  <a id="button"></a>
+
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.ico">
+
+
+</head>
+
+<body>
+
+  <section class="colored-section" id="title">
+    <div class="container-fluid">
+
+      <!-- Nav Bar -->
+
+      <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="index.html">
+          Projet encadré 2<br />
+          <h5>Master 1 Traitement automatique des langues</h5>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#conclusion">Conclusion</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#tools">Méthodes</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#footer">Contacts</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+
+      <!-- Présentation -->
+
+      <div class="presentation">
+        <h2 "big-heading">Présentation</h2>
+        <p>Ce site contient l'ensemble des résultats obtenus lors la réalisation du projet du cours "Programmation et Projet encadré 2" dispensé par Serge Fleury et Jean-Michel Daube dans le cadre du master Traitement Automatique des Langues à
+          l'INALCO. </p>
+        <p>Le projet vise à apprendre à utiliser les outils nécessaires au traitement d'un corpus composé de l'ensemble des fils RSS disponibles sur le site du journal <a class="text-light" href="https://www.lemonde.fr/" target="_blank">Le Monde</a>
+          recueillis tous les jours de l'année 2020 à 19h. Nous avons constitué au fil du semestre 3 boîtes à outils réunissant les programmes successifs réalisés pour un traitement complet de notre corpus de travail. Ces programmes ont pour le but
+          les tâches / les traitements suivants :
+        <ul class="fa-ul">
+          <li><span class="fa-li"><i class="fas fa-check-square"></i></span>Extraction des données textuelles</li>
+          <li><span class="fa-li"><i class="fas fa-check-square"></i></span>Étiquetage des données extraites</li>
+          <li><span class="fa-li"><i class="fas fa-check-square"></i></span>Extraction des données étiquetées</li>
+        </ul>
+        </p>
+        <p>Pour consultez chaque étape de ce projet, veuillez cliquer sur les boîtes à outils ci-dessous.</p>
+      </div>
+
+      <div class="bao-section row">
+
+        <a href="#bao1" class="card-link">
+          <div class="bao-column col-lg-4">
+            <div class="card presentation-card">
+              <div class="card-header">
+                <h3>Boîte à outils n°1</h3>
+              </div>
+              <div class="card-body">
+                <h4 class="card-subtitle mb-2 text-muted">Extraction du corpus des fils RSS</h4>
+                <center><i class="icon fas fa-rss fa-4x"></i></center>
+                <p class="card-text">Perl RegEx et XML::RSS</p>
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <a href="#bao2" class="card-link">
+          <div class="bao-column col-lg-4">
+            <div class="card presentation-card">
+              <div class="card-header">
+                <h3>Boîte à outils n°2</h3>
+              </div>
+              <div class="card-body">
+                <h4 class="card-subtitle mb-2 text-muted">Étiquetage du corpus</h4>
+                <br />
+                <center><i class="icon fas fa-tags fa-4x"></i></center>
+                <p class="card-text">UDPipe et TreeTagger</p>
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <a href="#bao3" class="card-link">
+          <div class="bao-column col-lg-4">
+            <div class="card presentation-card">
+              <div class="card-header">
+                <h3>Boîte à outils n°3</h3>
+              </div>
+              <div class="card-body">
+                <h4 class="card-subtitle mb-2 text-muted">Extraction de patrons morpho-syntaxiques</h4>
+                <center><i class="icon fas fa-list-alt fa-4x"></i></center>
+                <p class="card-text">Perl, XSLT, XQuery, Python</p>
+              </div>
+            </div>
+          </div>
+        </a>
+
+      </div>
+    </div>
+
+  </section>
+
+
+  <!-- BaO 1 Section -->
+
+  <section class="white-section" id="bao1">
+
+    <div class="container-fluid">
+
+      <header class="bao-head">
+        <div>
+          <h3>Boîte à outils n°1 : Extraction du texte</h3>
+        </div>
+      </header>
+
+      <br />
+
+      <div class="bao">
+        <h5>Objectif</h5>
+        <p>Parcourir toute l'arborescence et extraire les contenus textuels de tous les fils (classement des textes extraits par rubrique).</p>
+        <br />
+        <h5>Description</h5>
+        <p>Le but de cette première étape est d'extraire, sur l'intégralité de l'arborescence des fils RSS, les contenus textuels pertinents pour notre projet, et de les concaténer en un seul fichier, dont on se servira pour les étapes suivantes.</p>
+        <p>Chaque fichier de sortie doit représenter le contenu d'une seule rubrique. Pour ce projet, les rubriques suivantes ont a été choisies :
+        <ul class="rubrique">
+          <li>3208 : À la Une</li>
+          <li>3210 : International</li>
+          <li>3246 : Culture</li>
+        </ul>
+        </p>
+        <p>Dans notre corpus de travail qui nous a été fourni, cette fois il y a deux formats disponibles – XML et TXT. Nous ne nous intéressons qu'aux fichiers XML de notre arborescence qui ont tous la même structure. Cela nous permet d'extraire les
+          contenus de deux balises (<code>&lt;title&gt;</code> et <code>&lt;description&gt;</code>) sans problème.</p>
+        <p>Il existe plusieurs manières pour récupérer ces informations. Pour la méthode principale vue en cours, on a utilisé le langage Perl. En gros, ce programme se comporte comme la commande <code>egrep</code> Unix. Pour être plus précis, nous avons effectué
+          le parcours récursif de l'arborescence pour accéder à chaque fichier, puis appliquer les traitements.</p>
+
+      </div>
+
+      <!-- Snippet 1 -->
+      <div class="accordion" id="accordionExample">
+        <div class="card">
+          <div class="card-header" id="headingOne">
+            <h2 class="mb-0">
+              <button class="btn btn-link btn-block text-left text-info" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                <center>Parcours d'arborescence</center>
+              </button>
+            </h2>
+            <div id="collapseOne" class="collapse hide" aria-labelledby="headingOne" data-parent="#accordionExample">
+              <div class="card-body">
+                <pre>
+             <code class="perl code-snippet">
+sub parcoursArborescence
+{
+   # Récupère le nom du répertoire fourni en argument de la fonction
+   my $path = shift(@_);
+
+   # Ouverture du répertoire et copie de son contenu
+   opendir(my $DIRhandle, $path) or die "Can't open $path: $!\n";
+   my @files = readdir($DIRhandle);
+   closedir($DIRhandle);
+
+   foreach my $file (@files)
+   {
+        next if $file =~ /^\.\.?$/;
+        $file = $path."/".$file;
+        # Si le contenu est un répertoire,
+        # on rappelle la fonction de parcours
+        if (-d $file)
+        {
+            &parcoursarborescencefichiers($file);
+        }
+        # Si le contenu est un fichier
+        if (-f $file)
+        {
+            # Extraction du texte
+            ...
+        }
+    }
+}
+             </code>
+          </pre>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <br />
+
+      <div class="bao">
+        <p>
+          Le traitement s'effectue à l'aide de la fonction qui intègre l'extraction par expression régulière. Les expressions régulières, étant le cœur du langage Perl, permettent de « matcher » les motifs qui nous intéressent. Cela s'avère très
+          pratique quand on travaille sur les documents structurés !
+        </p>
+        <p>Pour donc extraire le contenu textuel des balises <code>&lt;title&gt;</code> et <code>&lt;description&gt;</code>, on a implémenté le motif suivant :</p>
+        <pre>
+          <code class="perl">
+            m/&lt;item>.*?&lt;title&gt;(.+?)&lt;\/title&gt;.+?&lt;description&gt;(.+?)&lt;\/description&gt;.*?&lt;\/item&gt;/gs
+          </code>
+        </pre>
+        <p>
+          Quand on parcourt l'ensemble du corpus, on peut mettre certaines « zones » dans les parenthèses pour les garder en mémoire. Tant que le programme rencontre des portions correspondant à ce qui est recherché, les motifs sont affectés aux
+          variables <code>$titre</code> et <code>$description</code>. Les doublons sont évités grâce à une table de hashage dans laquelle on a rangé tous les titres rencontrés.
+        </p>
+        <p>
+          Ces informations sont ensuite « nettoyées » par les substitutions avec un sous-programme : on supprime les éléments inutiles (les caractères transcodés, les espaces insécables, guillemets simples dans les places d'apostrophes, etc.). Voici
+          l'aperçu de cette fonction :
+        </p>
+      </div>
+
+      <!-- Snippet 2 -->
+
+      <div class="card">
+        <div class="card-header" id="headingTwo">
+          <div>
+            <h2 class="mb-0">
+              <button class="btn btn-link btn-block text-left text-info" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                <center>Nettoyage par substitutions</center>
+              </button>
+            </h2>
+          </div>
+          <div id="collapseTwo" class="collapse hide" aria-labelledby="headingTwo" data-parent="#accordionExample">
+            <div class="card-body">
+              <pre>
+                  <code class="perl code-snippet">
+sub nettoyage
+{
+  	my $texte = $_[0];
+    $texte =~ s/^&lt;!\[CDATA\[//;
+  	$texte =~ s/\]\]&gt;>$//;
+    $texte =~ s/&lt;.+?&gt;//g; # supprime les succession de balises transcodées $lt; &gt;
+    $texte =~ s/&amp;/et/g; # remplace les &amp; par et
+    $texte =~ s/&nbsp;/ /g; # remplace les &nbsp; par des espaces 'normaux'
+    $texte =~ s/&#38;#39;/'/g; # remplace les apostrophes transcodées &#38;#39;
+    $texte =~ s/&#38;#34;/"/g; # remplace les guillemets doubles &#38;#34;
+    $texte =~ s/ / /g; # remplace les espaces insécables par des espaces 'normaux'
+    $texte =~ s/'/'/g; # remplace des guillemets simples par des apostrophes
+  	return $texte;
+}
+                  </code>
+    		        </pre>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <br />
+
+      <div class="bao">
+        <p>Le résultat nettoyé est ensuite écrit dans deux fichiers de sortie : un fichier texte et un fichier XML. Le programme se lance en mettant en argument le nom du répertoire à parcourir et l'identifiant de la rubrique qu'on souhaite traiter :
+        </p>
+        <pre>
+        <code class="bash">
+          perl ./BaO1/parcours-arborescence-BAO1-regex.pl 2020 3210
+        </code>
+      </pre>
+        <p>
+          L'autre version du programme utilise le module Perl <a class="text-info" href="http://search.cpan.org/dist/XML-RSS/lib/XML/RSS.pm" target="_blank">XML::RSS</a>. Le principe est le même : on parcourt l'arborescence de la même façon, on
+          traite les données de
+          la même façon... Seulement l'extraction s'effectue différemment : avec le module on crée un parser sur le fichier et permet d'en parcourir aisément l'arborescence et extraire les contenus des balises <code>&lt;title&gt;</code> et
+          <code>&lt;description&gt;</code>.
+        </p>
+      </div>
+
+      <!-- Snippet 2 -->
+
+      <div class="card">
+        <div class="card-header" id="headingThree">
+          <h2 class="mb-0">
+            <button class="btn btn-link btn-block text-left text-info" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+              <center>Parsing XML::RSS</center>
+            </button>
+          </h2>
+          <div id="collapseThree" class="collapse hide" aria-labelledby="headingThree" data-parent="#accordionExample">
+            <div class="card-body">
+              <pre>
+                  <code class="perl code-snippet">
+use XML::RSS;
+
+# Création d'un parser sur le fichier lu en paramètre
+my $file = "$ARGV[0]";
+my $rss = new XML::RSS;
+$rss->parsefile($file);
+
+# Exemple d'utilisation : extraction de la date
+my $date=$rss->{'channel'}->{'pubDate'};
+                  </code>
+               </pre>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <br />
+      <br />
+
+      <div class"bao">
+        <p> Pour en avoir le cœur net, on a utilisé la fonctionnalité de Sublime Text – <a class="text-info" href="https://packagecontrol.io/packages/Compare%20Side-By-Side" target="_blank">Compare Side-By-Side</a> – pour comparer les deux sorties. Les
+          fichiers générés par les deux méthodes sont identiques.</p>
+        <div>
+
+          <br />
+
+          <h5>Scripts et résultats</h5>
+          <p>Les programmes et les résultats obtenus pour chacune des trois rubriques sont disponibles ci-dessous.</p>
+
+          <div class="table-responsive-sm">
+            <table class="download-table table table-hover table-bordered table-sm">
+              <thead>
+                <tr>
+                  <th scope="col">Méthode</th>
+                  <th scope="col">Script</th>
+                  <th scope="col">Sorties</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">Perl via RegEx</th>
+                  <td>
+                    <a href="./../BaO1/parcours-arborescence-BAO1-regex.pl" target="_blank">parcours-arborescence-BAO1-regex.pl</a>
+                  </td>
+                  <td>
+                    <a href="./../BaO1/sortie-regex_3208.txt" target="_blank">sortie-regex_3208.txt</a><br />
+                    <a href="./../BaO1/sortie-regex_3208.xml" target="_blank">sortie-regex_3208.xml</a><br />
+                    <a href="./../BaO1/sortie-regex_3210.txt" target="_blank">sortie-regex_3210.txt</a><br />
+                    <a href="./../BaO1/sortie-regex_3210.xml" target="_blank">sortie-regex_3210.xml</a><br />
+                    <a href="./../BaO1/sortie-regex_3246.txt" target="_blank">sortie-regex_3246.txt</a><br />
+                    <a href="./../BaO1/sortie-regex_3246.xml" target="_blank">sortie-regex_3246.xml</a><br />
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">Perl via XML::RSS</th>
+                  <td>
+                    <a href="./../BaO1/parcours-arborescence-BAO1-xml-rss.pl" target="_blank">parcours-arborescence-BAO1-xml-rss.pl</a>
+                  </td>
+                  <td>
+                    <a href="./../BaO1/sortie-rss_3208.txt" target="_blank">sortie-rss_3208.txt</a><br />
+                    <a href="./../BaO1/sortie-rss_3208.xml" target="_blank">sortie-rss_3208.xml</a><br />
+                    <a href="./../BaO1/sortie-rss_3210.txt" target="_blank">sortie-rss_3210.txt</a><br />
+                    <a href="./../BaO1/sortie-rss_3210.xml" target="_blank">sortie-rss_3210.xml</a><br />
+                    <a href="./../BaO1/sortie-rss_3246.txt" target="_blank">sortie-rss_3246.txt</a><br />
+                    <a href="./../BaO1/sortie-rss_3246.xml" target="_blank">sortie-rss_3246.xml</a><br />
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          </p>
+          <p><em>Note :</em> le temps de traitement est presque 10 fois plus long avec la méthode XML::RSS. Par contre, le script avec les expressions régulières fournit des résultats très rapidement, environ 0.4-0.3 secondes par rubrique sur notre
+            machine. On va donc ensuite reprendre ce programme pour les BàO suivantes.</p>
+        </div>
+
+  </section>
+
+
+  <!-- BaO 2 Section -->
+
+  <section class="colored-section" id="bao2">
+
+    <div class="container-fluid">
+
+      <header class="bao-head">
+        <div>
+          <h3>Boîte à outils n°2 : Étiquetage du texte</h3>
+        </div>
+      </header>
+
+      <br />
+
+      <div class="bao">
+        <h4>Objectif</h4>
+        <p>Étiquetage automatique des contenus textuels extraits (<a class="text-info" href="https://www.cis.lmu.de/~schmid/tools/TreeTagger/" target="_blank">Treetagger</a> et <a class="text-info" href="https://ufal.mff.cuni.cz/udpipe"
+            target="_blank">UDpipe</a> : annotation en morpho-syntaxe et en dépendances).</p>
+      </div>
+      <br />
+      <h5>Description</h5>
+      <p>Ici, la version du script élaborée dans la précédente boîte à outils a été complétée pour y ajouter une étape d'étiquetage réalisée sur les sorties. C'est grâce à l'étiquetage morpho-syntaxique et en dépendance qu'on pourra ensuite extraire
+        des patrons morpho-syntaxiques et des relations dans la BàO 3. </p>
+      <br />
+      <h6>TreeTagger et TreeTagger 2XML</h6>
+      <p>Une procédure a été rajoutée dans le script pour effectuer l'étiquetage avec TreeTagger. Pour cela, nous avons lancé le programme grâce à la fonctionnalité <code>system()</code> de Perl qui permet de lancer une commande via la console de l'OS.</p>
+      <p>Le programme prend en paramètres un titre et une description récupérés et nettoyés précédemment (en format XML). Il effectue la même opération sur le titre et la description : il commence par écrire le contenu de la variable dans un fichier
+        temporaire puis, après avoir tokenisé ce fichier grâce à un script Perl <a class="text-info" href="./outils/TreeTagger/cmd/utf8-tokenize.perl.zip" target="_blank">utf8-tokenize.perl</a>, le soumet à TreeTagger.</p>
+      <code class="perl">
+        system("perl -f ./outils/TreeTagger/cmd/utf8-tokenize.perl ./BaO2/sortie-regex_$rubrique.xml | ./outils/TreeTagger/bin/tree-tagger ./outils/TreeTagger/lib/french.par -token -lemma -sgml -no-unknown > ./BaO2/sortieTT-regex_$rubrique");
+      </code>
+      <br /><br />
+      <p>On utilise également un autre script Perl, <a class="text-info" href="outils/TreeTagger/cmd/treetagger2xml-utf8.pl.zip" target="_blank">treetagger2xml-utf8.pl</a>, pour convertir le fichier généré par TreeTagger en fichier XML : </p>
+      <code class="perl">
+        system("perl ./outils/TreeTagger/cmd/treetagger2xml-utf8.pl ./BaO2/sortieTT-regex_$rubrique utf8");
+      </code>
+      <br />
+      <br />
+      <h6>UDPipe</h6>
+      <p>Nouveauté cette année, ce programme effectue l'étiquetage morpho-syntaxique et en dépendance et génère le résultat en format CONLL.</p>
+      <p>On le lance de la même façon que TreeTagger – via la fonction <code>system()</code> de Perl.</p>
+      <code class="perl">
+        system("./outils/udpipe-master/src/udpipe --tokenize --tag --parse --tokenizer=presegmented ./outils/udpipe-master/models/french-sequoia-ud-2.5-191206.udpipe ./BaO2/sortie-regex_$rubrique.txt > ./BaO2/sortieUD-regex_$rubrique.txt");
+      </code>
+      <br /><br />
+      <p><em>Note :</em> Pour que l'outil performe l'étiquetage correctement sur les élisions signalées par un apostrophe, il fallait ajouter une substitution de plus dans la procédure de nettoyage. Cette substitution remplace les caractères non
+        standard (right single quotation mark <code>U+2019</code>) par un apostrophe standard typographique (<code>U+0027</code>).</p>
+      <br />
+
+      <h5>TreeTagger vs UDPipe</h5>
+      <p>Les étiquetages réalisés par TreeTaggers et par UDPipe sont assez différents en termes de format de sortie et les jeux d'étiquettes employés.</p>
+      <p>Avec TreeTagger (et bien sûr TreeTagger2XML), on obtient un résultat qu'on peut directement intégrer sous le format XML, ce qui permet ensuite d'utiliser tout un tas d'outils spécifiques aux documents XML (XPath, XSLT, XQuery, etc.).
+      </p>
+      <p>Avec UDPipe on obtient un résultat sous format CoNLL. L'outil ne permet pas d'avoir des sorties sous format XML mais finalement cela ne pose pas de problème car les fichiers CoNLL peuvent être fouillés par d'autres manières (cf. la partie
+        Python de BàO3). L'autre solution – transcoder le fichier CoNLL en format XML.
+      </p>
+      <p>Les étiquetages sont difficilement comparables dans la mesure où les jeux d'étiquettes utilisés ne sont pas les mêmes. Le <a class="text-info" href="http://www.cis.uni-muenchen.de/~schmid/tools/TreeTagger/data/french-tagset.html"
+          target="_blank">tagset du français</a> de TreeTagger est constitué d'environ 33 étiquettes contre 17 étiquettes pour UDPipe (cf. le <a class="text-info" href="https://universaldependencies.org/u/pos/index.html" target="_blank">tagset
+          universel</a> d'après le <a class="text-info" href="https://universaldependencies.org/guidelines.html" target="_blank">manuel Universal Dependencies</a>).</p>
+      <p>Les <a class="text-info" href="https://universaldependencies.org/u/feat/index.html" target="_blank">informations grammaticales et lexicales</a> sur les catégories UDPipe sont stockées dans la colonne FEATS de la sortie CoNLL.</p>
+      <p>Enfin, contrairement à TreeTagger, la sortie UDPipe comprend les informations sur les <a class="text-info" href="https://universaldependencies.org/u/dep/index.html" target="_blank">dépendances syntaxiques</a>.</p>
+      <p>Une rapide inspection visuelle permet de comparer les deux sorties (sans juger vraiment la qualité d'annotation bien sûr), souvent pas en faveur de TreeTagger.</p>
+      <p>Par exemple, TreeTagger reconnaît « 91 000 » comme étant deux nombres cardinaux (« 91 » et « 000 ») et UDPipe de son côté traite ce nombre comme une seule entité (malgré cet espace !).</p>
+      <p>Une autre chose que TreeTagger a du mal à faire, c'est la segmentation de « d' » et de « qu' ». L'outil les laisse souvent collés au substantif (cf. « d'uranium » dans l'exemple ci-dessous). UDPipe quant à lui fonctionne bien dans ce sens
+        (si le caractère d'apostrophe est celui du U+0027, sinon les erreurs sont possibles).</p>
+      <p>
+        <button class="btn btn-info" type="button" data-toggle="collapse" data-target=".multi-collapse1" aria-expanded="false" aria-controls="multiCollapse1 multiCollapse2">Aperçu de deux étiquetages</button>
+      </p>
+      <div class="row">
+        <div class="col">
+          <div class="collapse multi-collapse1" id="multiCollapse1">
+            <div class="card card-body">
+              <p>Aperçu de la sortie UDPipe</p>
+              <pre>
+                <code class="plain">
+# newpar
+# sent_id = 3
+# text = Nucléaire iranien : le stock d'uranium enrichi dépasse de cinq fois la limite autorisée.
+1	Nucléaire	nucléaire	NOUN	_	Gender=Masc|Number=Sing	0	root	_	_
+2	iranien	iranien	ADJ	_	Gender=Masc|Number=Sing	1	amod	_	_
+3	:	:	PUNCT	_	_	1	punct	_	_
+4	le	le	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	5	det	_	_
+5	stock	stock	NOUN	_	Gender=Masc|Number=Sing	1	appos	_	_
+6	d'	de	ADP	_	_	7	case	_	SpaceAfter=No
+7	uranium	uranium	NOUN	_	Gender=Masc|Number=Sing	5	nmod	_	_
+8	enrichi	enrichi	PRON	_	PronType=Int	9	obj	_	_
+9	dépasse	dépas	VERB	_	Mood=Sub|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	5	acl:relcl	_	_
+10	de	de	ADP	_	_	12	case	_	_
+11	cinq	cinq	NUM	_	NumType=Card	12	nummod	_	_
+12	fois	fois	NOUN	_	Gender=Fem|Number=Plur	9	obl:mod	_	_
+13	la	le	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	14	det	_	_
+14	limite	limite	NOUN	_	Gender=Fem|Number=Sing	9	nsubj	_	_
+15	autorisée	autorisé	VERB	_	Gender=Fem|Number=Sing|Tense=Past|VerbForm=Part	14	acl	_	SpaceAfter=No
+16	.	.	PUNCT	_	_	1	punct	_	SpacesAfter=\n
+                </code>
+              </pre>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="collapse multi-collapse1" id="multiCollapse2">
+            <div class="card card-body">
+              <p>Aperçu de la sortie TreeTagger</p>
+              <pre>
+                <code class="XML">
+&lt;title&gt;
+&lt;article&gt;
+&lt;element&gt;&lt;data type="type"&gt;NOM&lt;/data&gt;&lt;data type="lemma"&gt;nucléaire&lt;/data&gt;&lt;data type="string"&gt;Nucléaire&lt;/data&gt;&lt;/element&gt;
+&lt;element&gt;&lt;data type="type"&gt;ADJ&lt;/data&gt;&lt;data type="lemma"&gt;iranien&lt;/data&gt;&lt;data type="string"&gt;iranien&lt;/data&gt;&lt;/element&gt;
+&lt;element&gt;&lt;data type="type"&gt;PUN&lt;/data&gt;&lt;data type="lemma"&gt;:&lt;/data&gt;&lt;data type="string"&gt;:&lt;/data&gt;&lt;/element&gt;
+&lt;element&gt;&lt;data type="type"&gt;DET:ART&lt;/data&gt;&lt;data type="lemma"&gt;le&lt;/data&gt;&lt;data type="string"&gt;le&lt;/data&gt;&lt;/element&gt;
+&lt;element&gt;&lt;data type="type"&gt;NOM&lt;/data&gt;&lt;data type="lemma"&gt;stock&lt;/data&gt;&lt;data type="string"&gt;stock&lt;/data&gt;&lt;/element&gt;
+&lt;element&gt;&lt;data type="type"&gt;NOM&lt;/data&gt;&lt;data type="lemma"&gt;d'uranium&lt;/data&gt;&lt;data type="string"&gt;d'uranium&lt;/data&gt;&lt;/element&gt;
+&lt;element&gt;&lt;data type="type"&gt;VER:pper&lt;/data&gt;&lt;data type="lemma"&gt;enrichir&lt;/data&gt;&lt;data type="string"&gt;enrichi&lt;/data&gt;&lt;/element&gt;
+&lt;element&gt;&lt;data type="type"&gt;VER:pres&lt;/data&gt;&lt;data type="lemma"&gt;dépasser&lt;/data&gt;&lt;data type="string"&gt;dépasse&lt;/data&gt;&lt;/element&gt;
+&lt;element&gt;&lt;data type="type"&gt;PRP&lt;/data&gt;&lt;data type="lemma"&gt;de&lt;/data&gt;&lt;data type="string"&gt;de&lt;/data&gt;&lt;/element&gt;
+&lt;element&gt;&lt;data type="type"&gt;NUM&lt;/data&gt;&lt;data type="lemma"&gt;cinq&lt;/data&gt;&lt;data type="string"&gt;cinq&lt;/data&gt;&lt;/element&gt;
+&lt;element&gt;&lt;data type="type"&gt;NOM&lt;/data&gt;&lt;data type="lemma"&gt;fois&lt;/data&gt;&lt;data type="string"&gt;fois&lt;/data&gt;&lt;/element&gt;
+&lt;element&gt;&lt;data type="type"&gt;DET:ART&lt;/data&gt;&lt;data type="lemma"&gt;le&lt;/data&gt;&lt;data type="string"&gt;la&lt;/data&gt;&lt;/element&gt;
+&lt;element&gt;&lt;data type="type"&gt;NOM&lt;/data&gt;&lt;data type="lemma"&gt;limite&lt;/data&gt;&lt;data type="string"&gt;limite&lt;/data&gt;&lt;/element&gt;
+&lt;element&gt;&lt;data type="type"&gt;VER:pper&lt;/data&gt;&lt;data type="lemma"&gt;autoriser&lt;/data&gt;&lt;data type="string"&gt;autorisée&lt;/data&gt;&lt;/element&gt;
+&lt;element&gt;&lt;data type="type"&gt;SENT&lt;/data&gt;&lt;data type="lemma"&gt;.&lt;/data&gt;&lt;data type="string"&gt;.&lt;/data&gt;&lt;/element&gt;
+&lt;/article&gt;
+&lt;/title&gt;
+                </code>
+              </pre>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br />
+      <p>Les deux outils semblent avoir des problèmes avec la détection de noms propres, mais on a quand même l'impression que TreeTagger se comporte mieux ici. Nous avons étudié les sorties pour la rubrique 3210 pour avoir une idée de ce qui se passe.
+      </p>
+      <p>Par exemple, dans certains cas UDPipe reconnaît « Emmanuel Macron » comme PROPN, mais il y a quand même les occurrences de telles étiquettes comme DET (pour « Emmanuel », 34 fois dans 3210) et NOUN (pour « Macron », 23 fois). Sur la même rubrique,
+        TreeTagger s'est trompé 26 fois sur «Macron» (en l'annotant comme NOM au lieu de NAM) et 17 fois sur « Emmanuel » (en le marquant comme ADJ au lieu de NAM). Pour être juste, les erreurs d'annotation du mot « Emmanuel » de TreeTagger sont
+        liées aux problèmes de segmentations que l'on a décrit avant. Toutes les occurrences de « d'Emmanuel » et « qu'Emmanuel » sont étiquetées comme adjectifs.</p>
+      </p>
+      <p>Quant aux noms propres étrangers (on compare quand même la rubrique « International » ici !), la comparaison n'est pas en faveur de TreeTagger encore une fois. Par exemple, « Los Angeles » n'était quasiment pas reconnu par l'outil comme un nom
+        propre. On peut observer les étiquettes comme ADJ ou VER. UDPipe, par contre, n'a pas fait d'erreurs avec ce mot.
+      </p>
+      <p>Dans l'ensemble, chaque outil présente ses propres avantages. On ne pourrait bien entendu pas juger de la qualité des deux étiqueteurs simplement d'après ces quelques exemples. Idéalement, l'efficacité d'un étiqueteur devrait être mésurée en calculant la précision, le rappel et la F-mesure par rapport au « Gold Standard » (étiquetage correct, fait par un expert).  Mais si le peu qui a pu être observé ici est constant tout au long
+        des documents étiquetés, cela aura un impact sur les résultats pour l'extraction des patrons morpho-syntaxiques et des relations dans la BàO 3. On verra si c'est vrai dans la suite.</p>
+      <br />
+      <h5>Scripts et résultats</h5>
+      <p>Les programmes et les résultats obtenus pour chaque de trois rubriques sont disponibles ci-dessous.</p>
+      <div class="table-responsive-sm">
+        <table class="download-table table table-hover table-bordered table-sm">
+          <thead>
+            <tr>
+              <th scope="col">Script</th>
+              <th scope="col">Sorties TreeTagger</th>
+              <th scope="col">Sorties UDPipe</th>
+              <th scope="col">Sorties UDPipe (formatées en XML)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <a href="./../BaO2/etiquetage-BAO2-regex.pl" target="_blank">etiquetage-BAO2-regex.pl</a>
+              </td>
+              <td>
+                <a href="./../BaO2/sortieTT-regex_3208.xml" target="_blank">sortieTT-regex_3208.xml</a><br />
+                <a href="./../BaO2/sortieTT-regex_3210.xml" target="_blank">sortieTT-regex_3210.xml</a><br />
+                <a href="./../BaO2/sortieTT-regex_3246.xml" target="_blank">sortieTT-regex_3246.xml</a><br />
+              </td>
+              <td>
+                <a href="./../BaO2/sortieUD-regex_3208.txt" target="_blank">sortieUD-regex_3208.txt</a><br />
+                <a href="./../BaO2/sortieUD-regex_3210.txt" target="_blank">sortieUD-regex_3210.txt</a><br />
+                <a href="./../BaO2/sortieUD-regex_3246.txt" target="_blank">sortieUD-regex_3246.txt</a><br />
+              </td>
+              <td>
+                <a href="./../BaO2/sortieUD-regex_3208.xml" target="_blank">sortieUD-regex_3208.xml</a><br />
+                <a href="./../BaO2/sortieUD-regex_3210.xml" target="_blank">sortieUD-regex_3210.xml</a><br />
+                <a href="./../BaO2/sortieUD-regex_3246.xml" target="_blank">sortieUD-regex_3246.xml</a><br />
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <p><em>Note :</em> Les fichiers XML sont volumineux (d'environ 30-40Mo), les navigateurs peuvent avoir du mal à les afficher. Il est donc conseillé de les télécharger.</p>
+        <p><em>Note :</em> Quelques lignes pour évaluer le temps de traitement ont été aussi ajoutées au programme. Cela dépend largement de la machine, mais voici nos performances : 266 secondes pour la 3208, 278 secondes pour la 3210 et 195 secondes pour la 3246. Une autre méthode d’étiquetage a été mentionnée dans le cours – l'étiquetage « à la volée ». Il n’est pas possible que cette méthode soit plus performante et rapide que celle que nous avons utilisée. Donc nous n’avons pas été tenté de la tester.</p>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- BaO 3 Section -->
+
+  <section class="white-section" id="bao3">
+
+    <div class="container-fluid">
+
+      <header class="bao-head">
+        <div>
+          <h3>Boîte à outils n°3</h3>
+        </div>
+      </header>
+
+      <div class="description">
+        <h4>Objectif</h4>
+        <p>Extraction des patrons morpho-syntaxiques et relations de dépendence dans les sorties produites à l'issue de la BàO 2.</p>
+        <br />
+        <h4>Description</h4>
+        <p>Dans cette troisième étape de notre projet, nous devons construire des listes de patrons morpho-syntaxiques à partir de contenus textuels des fils RSS traités. Les patrons à extraire de chaque rubrique traitée sont : <b>ADJ-NOM</b>, <b>NOM-ADJ</b>, <b>NOM-PREP-NOM</b>, <b>VERBE-DET-NOM</b>, <b>NOM-VERBE-ADJ</b> et <b>VERBE-ADV-ADJ</b>. Quant aux relations syntaxiques en dépendance, nous allons extraire les couples dépendant-gouverneur portants les relations : <b>obj</b>, <b>acl</b> et <b>flat:name</b>. Les résultats d'extraction triés et décomptés sont sauvegardés dans les fichiers TXT.</p>
+        <p>Toutes ces informations linguistiques sont importantes pour comprendre les caractéristiques et sujets principaux de chaque rubrique du journal Le Monde traitée. Par exemple, les patrons comme <b>NOM-ADJ</b> et les autres permettront de définir les sujets principaux dans chaque domaine étudié. Évidemment que pour les rubriques « International » et « Culture » on ne trouvera pas beaucoup de mêmes séquences de mots et donc de mêmes thématiques. Pour les rubriques « À la une » et « International », par contre, elles peuvent avoir pas mal de choses en commun, à mon avis.</p>
+        <p>Parmi les relation syntaxiques à extraire j'ai choisi, par exemple, celle de <b>flat:name</b> qui lie très souvent les éléments composants des noms propres. J'attends d'obtenir des listes avec une sorte d'entités nommées, principalement les noms de personnes, des endroits, des entreprises... Cela peut s'avérer significatif pour caractériser les rubriques.</p>
+        <p>Plusieurs méthodes ont été mises en place pour extraire les informations linguistiques mentionnées ci-dessus. La méthode principale vue dans le cours, c'est le script Perl qui est basée en grande partie sur les expressions régulières. Ensuite nous avons vu (principellemnt sans le cadre du cours Documents Structurés) les méthodes basées sur les langages de la famille XML (XSLT et XQuery). Enfin, j'ai essayé d'effectuer les mêmes tâches avec le langage Python. Ici, on va vous présenter toutes ces différentes méthodes.</p>
+        <br />
+        <h5>Méthode 1 : Perl via expressions régulières</h5>
+        <p>J’ai apporté quelques modifications au script Perl <code>extract_patron.pl</code> vu en cours afin de sortir un fichier TXT par patron.
+        Chaque fichier en sortie du script est donc nommé <code>{patron}_{rubrique}_pl.txt</code>. Pour cela le script boucle d’abord sur la liste des patrons (<a class="text-info" href="./../BaO3/01_extract-patron_perl/patrons.txt" target="_blank">patrons.txt</a> en paramètre de la ligne de commande), puis sur les lignes du fichier UDPipe au format CoNLL. Le reste du traitement est identique à celui vu en cours. Ce fonctionnement implique cependant de lire n fois (1 fois par patron) le fichier de sortie UDPipe ce qui dégrade peut-être les performances. Le programme donc le lance comme ceci :</p>
+        <code class="perl">
+          perl extraction.pl fichier_etiquete.txt fichier_patrons.txt
+        </code>
+        <br />
+        <br />
+        <p>Le script Perl pour <code>extract_relation.pl</code> est un peu différent de celui pour l'extraction des patrons. Contrairement à l'extraction de patrons, on travaille dans ce cas sur le fichier étiqueté par UDPipe converti en format XML. Ici on ne passe pas le fichier TXT avec la liste des relations souhaitées en argument, on passe le nom de la relation directements dans la ligne de commande:</p>
+        <code class="bash">
+          perl extraction.pl fichier_etiquete.txt relation > sortie.txt
+        </code></p>
+        <br />
+        <h5>Méthode 2 : XSLT</h5>
+        <p>La transformation produite par les feuilles de style XSLT permet d'extraire le contenu textuel des fichiers XML. Ce travail à été effectué principalement dans le cadre du cours Documents Structurés. Comme on l'a vu dans le cours, c'est possible d'extraire différents patrons morpho-syntactique en combinant l'extraction textuelle avec des conditions pour trouver la bonne séquence d'étiquettes à récupérer. La transformation se fait via xsltproc sur la ligne de commande. Pour l'ensemble de travaux j'ai utilisé la version XSLT 1.0. </p>
+        <br />
+        <h5>Méthode 3 : XQuery</h5>
+        <p>Le langage de requête XQuery permet de fouiller des fichiers XML de façon assez efficace. Il suit la structure FLWOR (for, let, where, order by, return) et ressemble un peu syntaxiquement au language SQL. Travailler sur des fichiers XML, en tant que base de données, rend l'exploration de données assez rapide. Avec l'outil Base X on peut facilement visualiser l'arborescence des fichiers XML. Cette méthode, ainsi que la précedente, a été surtout étudiée dans le cadre du cours Documents Structurés.</p>
+        <br />
+        <h5>Méthode 4 : Python via Pyconll</h5>
+        <p>J’ai réalisé l’équivalent du traitement Perl pour l’extraction des patrons en utilisant le langage Python, notamment la bibliothèque <a class="text-info" href="https://pyconll.readthedocs.io/en/stable/" target="_blank">Pyconll</a> – <code>extract_patron.py</code>. Cependant j’ai apporté plusieurs modifications au traitement :
+          <ul class="function-list">
+            <li>Un programme principal permettant de :
+              <ul>
+                <li>créer les objets rubriques (classe rubrique) ;</li>
+                <li>boucler sur les rubriques et sur les patrons ;</li>
+                <li>appeler la fonction permettant de constituer le dictionnaire à partir d’une rubrique et d’un patron : <code>getDicoConnl()</code> ;</li>
+                <li>enregistrer le résultat avec la fonction <code>enregResult()</code>.</li>
+              </ul>
+            </li>
+            <li>L’ajout d’une classe rubrique contenant  :
+              <ul>
+                <li>le contenu du fichier UDPipe (utilisation de la bibliothèque Pyconll afin de créer un objet correspondant à notre fichier étiqueté ; cette bibliothèque permet de faire un parsing de notre fichier étiqueté pour faciliter l’accès aux différents attributs) ;</li>
+                <li>le chemin du fichier ;</li>
+                <li>le nom de la rubrique.</li>
+              </ul>
+            </li>
+            <li>Le découpage du traitement en 4 fonctions :
+              <ul>
+                <li><code>getDicoConnl()</code> : Permet de retourner un dictionnaire en fonction d’un patron et d’un objet Pyconll (fichier de sortie UDPipe). Cette fonction appelle également les fonctions <code>getSequence()</code> et <code>add_dico()</code>.</li>
+                <li><code>getSequence()</code> : Permet de retourner une séquence à ajouter au dictionnaire si elle est conforme à un patron.</li>
+                <li><code>add_dico()</code> : Permet d’ajouter une séquence de mot au dictionnaire avec le nombre d'occurrences.</li>
+                <li><code>enregResult()</code> : Permet d’enregistrer le résultat dans un fichier sous la forme <code>{patron}_{rubrique}_py.txt</code>.</li>
+              </ul>
+            </li>
+          </ul>
+        </p>
+        <p>Dans le script <code>extract_relation.py</code> la bibliothèque Pyconll est particulièrement pratique pour l’extraction des relations aussi car elle permet d’accéder directement à une relation à partir d’un ID.</p>
+        <p>Le traitement est quasiment identique à celui pour extraire les patrons sauf que nous avons ici seulement les 3 fonctions suivantes :
+          <ul class="function-list">
+            <li><code>getDicoRelations()</code> : Permet de retourner un dictionnaire en fonction d’une relation et d’un objet Pyconll (fichier de sortie UDPipe). Cette fonction utilise la fonction <code>add_dico()</code>.</li>
+            <li><code>add_dico()</code> : Permet d’ajouter une relation au dictionnaire avec le nombre d'occurrences.</li>
+            <li><code>enregResult()</code> : Permet d’enregistrer le résultat dans un fichier sous la forme <code>{relation}_{rubrique}_py.txt</code>.</li>
+          </ul>
+        </p>
+        <br />
+        <h5>Un coup d'œil sur les résultats</h5>
+        <p>Dans tous les cas, peu importe quelle méthode on utilise, cela nous permet de répondre à la question : Quels sont les termes caractéristiques de chaque rubrique ?</p>
+        <p>En observant les résultats obtenus pour le patron NOM-ADJ sur les trois rubriques différentes (récoltés via Python sur la sortie UDPipe au format CoNNL), on remarque que les rubriques « À la une » et « International » ont des terminologies proches, comparées à celle de la rubrique « Culture », comme on pouvait facilement le supposer. Cependant, la thématique la plus populaire (malheureusement) est la crise sanitaire, même pour la rubrique « Culture » c'est un sujet central. Les terminologies des rubriques « À la une » et « International » révèlent les élections présidentielles aux États-Unis très souvent. On dirait que les évènement principaux de l'année 2020, c'est l'épidémie de Covid-19 et la présidentielle américaine.</p>
+        <p>Le bouton ci-dessous montre les 20 séquences les plus fréquentes.</p>
+      </div>
+      <p>
+        <button class="btn btn-info" type="button" data-toggle="collapse" data-target=".multi-collapse" aria-expanded="false" aria-controls="multiCollapseExample1">Aperçu de NOM-ADJ</button>
+      </p>
+      <div class="row">
+        <div class="col">
+          <div class="collapse multi-collapse" id="multiCollapseExample1">
+            <div class="card card-body">
+              <pre>
+                <code class="plaintext">
+              À la une
+        199 crise sanitaire
+        57 réseaux sociaux
+        52 épidémie due
+        52 président américain
+        40 assemblée nationale
+        39 elections municipales
+        37 violences policières
+        36 chômage partiel
+        34 elections américaines
+        31 agressions sexuelles
+        31 élection présidentielle
+        30 élections municipales
+        30 urgence sanitaire
+        28 réseau social
+        27 personnels soignants
+        26 pandémie due
+        26 blouses blanches
+        26 commission européenne
+        26 présidentielle américaine
+        25 jeu vidéo
+                </code>
+             </pre>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="collapse multi-collapse" id="multiCollapseExample1">
+            <div class="card card-body">
+              <pre>
+                <code class="plaintext">
+              International
+        135 président américain
+        110 crise sanitaire
+        101 présidentielle américaine
+        66 commission européenne
+        66 élection présidentielle
+        65 elections américaines
+        64 réseaux sociaux
+        52 cour suprême
+        48 affaires étrangères
+        47 sécurité nationale
+        41 épidémie due
+        41 banque centrale
+        40 violences policières
+        35 crise économique
+        35 relance européen
+        33 élections législatives
+        28 président turc
+        28 parlement européen
+        27 arabie saoudite
+        27 pandémie due
+                </code>
+             </pre>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="collapse multi-collapse" id="multiCollapseExample1">
+            <div class="card card-body">
+              <pre>
+                <code class="plaintext">
+              Culture
+        76 crise sanitaire
+        49 sélection albums
+        47 feuilleton littéraire
+        46 brèves critiques
+        33 art contemporain
+        30 sélection musicale
+        29 cinéma français
+        28 réseaux sociaux
+        28 moment musical
+        26 série documentaire
+        22 voyage immobile
+        19 pause séries
+        18 cœur littéraires
+        17 centre national
+        17 moment décisif
+        17 guerre mondiale
+        16 œuvres complètes
+        16 rentrée littéraire
+        14 crise due
+        13 chaîne franco-allemande
+                </code>
+             </pre>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br />
+      <p>Maintenant j'aimerais bien étudier les résultats pour la relation en dépendence flat:name. Comme je l'ai déjà constaté, c'est comme si on extrait des entités nommées ce qui pourrait être très intéressant pour l'analyse linguistique.</p>
+      <p>Sans surprise, la rubrique « À la une » contient principalement les noms des politiciens français, même si les noms de Donald Trump et Joe Biden apparaissent presque aussi souvent que le nom Emmanuel Macron. Même le nom du président de Biélorussie a été mentionné 14 fois... Et encore les rubriques « À la une » et « International » ont beaucoup en commun, mais dans la dernière on rencontre surtout les noms érangers. La rubrique « Culture » parle surtout des écrivains et écrivaines. Le seul toponyme retrouvé dans toutes les trois rubriques – New York.</p>
+      <p>Ce bouton montre les 20 noms propres les plus fréquents extraits via Perl de la sortie UDPipe au format XML.</p>
+      <p>
+        <button class="btn btn-info" type="button" data-toggle="collapse" data-target=".multi-collapse2" aria-expanded="false" aria-controls="multiCollapseExample2">Aperçu de flat:name</button>
+      </p>
+      <div class="row">
+        <div class="col">
+          <div class="collapse multi-collapse2" id="multiCollapseExample2">
+            <div class="card card-body">
+              <pre>
+                <code class="plaintext">
+              À la une
+          Emmanuel Macron	108
+          Donald Trump	98
+          Joe Biden	76
+          Monde »	51
+          Edouard Philippe	51
+          Jean Castex	43
+          Boris Johnson	32
+          Anne Hidalgo	29
+          George Floyd	28
+          Maïa Mazaurette	25
+          Olivier Véran	25
+          Gérald Darmanin	21
+          Eric Dupond-Moretti	19
+          Charlie Hebdo	18
+          New York	16
+          Samuel Paty	16
+          Agnès Buzyn	16
+          Didier Raoult	16
+          Nicolas Sarkozy	15
+          Alexandre Loukachenko	14
+                </code>
+             </pre>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="collapse multi-collapse2" id="multiCollapseExample2">
+            <div class="card card-body">
+              <pre>
+                <code class="plaintext">
+              International
+          Donald Trump	284
+          Joe Biden	200
+          Boris Johnson	80
+          George Floyd	79
+          Emmanuel Macron	51
+          New York	46
+          Xi Jinping	33
+          Jair Bolsonaro	32
+          Mike Pompeo	29
+          Alexandre Loukachenko	29
+          Burkina Faso	28
+          Philippe Escande	27
+          Bernie Sanders	27
+          Vladimir Poutine	26
+          Angela Merkel	26
+          Ghassem Soleimani	25
+          Benyamin Nétanyahou	24
+          Nicolas Maduro	20
+          Barack Obama	18
+          Juan Guaido	18
+                </code>
+             </pre>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="collapse multi-collapse2" id="multiCollapseExample2">
+            <div class="card card-body">
+              <pre>
+                <code class="plaintext">
+              Culture
+          Mathias Enard	61
+          Camille Laurens	56
+          New York	42
+          Véronique Ovaldé	38
+          Monde »	31
+          Michel Guerrin	28
+          Los Angeles	24
+          Victor Hugo	23
+          Eric Chevillard	20
+          Roman Polanski	20
+          Monde Afrique	19
+          France Culture	17
+          Roselyne Bachelot	17
+          Radio France	14
+          France Inter	13
+          service Culture	12
+          Franck Riester	12
+          J' ai	11
+          Harvey Weinstein	11
+          Adèle Haenel	11
+                </code>
+             </pre>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br />
+      <p>Maintenant on veut regarder les patrons NOM-PREP-NOM extraits via XQuery. Cette séquence n'est pas moins parlant que les précedentes extractions vues. Les terminologies semblent être pertinentes pour ses rubriques « À la une » et « International » on parle souvent de la politique et donc du président. Pour la rubrique « Culture » le sujet principal, c'est la litérature et la presse (qui ont moins souffert  de l'épidemie que le théâtre ou le cinéma, evidemment). Cliquant le bouton ci-dessous vous pouvez consulter les 20 premiers groupes nominaux pour chaque rubrique.</p>
+      <p>
+        <button class="btn btn-info" type="button" data-toggle="collapse" data-target=".multi-collapse3" aria-expanded="false" aria-controls="multiCollapseExample3">Aperçu de NOM-PREP-NOM</button>
+      </p>
+      <div class="row">
+        <div class="col">
+          <div class="collapse multi-collapse3" id="multiCollapseExample3">
+            <div class="card card-body">
+              <pre>
+                <code class="plaintext">
+              À la une
+          66 chef de l'Etat
+          58 port du masque
+          47 réforme des retraites
+          41 projet de loi
+          40 ans de prison
+          40 Ligue des champions
+          35 Coronavirus en direct
+          31 plan de relance
+          31 milliers de personnes
+          29 garde à vue
+          28 face au coronavirus
+          26 Journal de crise
+          25 crise des blouses
+          24 millions de personnes
+          23 Réforme des retraites
+          23 dizaines de milliers
+          22 ministre de l'intérieur
+          22 mesures de confinement
+          22 République en marche
+          22 nombre de morts
+                </code>
+             </pre>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="collapse multi-collapse3" id="multiCollapseExample3">
+            <div class="card card-body">
+              <pre>
+                <code class="plaintext">
+              International
+          82 chef de l'Etat
+          78 plan de relance
+          64 ans de prison
+          44 droits de l'homme
+          41 milliers de personnes
+          33 dizaines de milliers
+          31 face au coronavirus
+          31 milliards de dollars
+          27 projet de loi
+          27 l'Etat de droit
+          26 l'épidémie de coronavirus
+          25 mesures de confinement
+          23 forces de l'ordre
+          23 millions de personnes
+          23 ministre des affaires
+          23 Conseil de sécurité
+          22 chef du gouvernement
+          22 nord du pays
+          21 crise du coronavirus
+          20 cas de contamination
+                </code>
+             </pre>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="collapse multi-collapse3" id="multiCollapseExample3">
+            <div class="card card-body">
+              <pre>
+                <code class="plaintext">
+              Culture
+          48 lectures en poche
+          44 coups de cœur
+          42 sélection de séries
+          30 journal de bord
+          29 bord des lectures
+          28 rédacteur en chef
+          26 metteur en scène
+          24 salles de cinéma
+          21 sélection de programmes
+          20 chronique du confinement
+          19 journal des lectures
+          15 mise en scène
+          15 sélection de films
+          14 début des années
+          14 salles de spectacle
+          14 choix en matière
+          14 matière de musique
+          13 temps de confinement
+          12 marché de l'art
+          12 choix de lectures
+          11 metteuse en scène
+                </code>
+             </pre>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br />
+      <p>
+        Pour résumer, les rubriques « À la une » et « International » ont en effet beaucoup en commun laissant la rubrique « Culture » un peu à part. Globalement, l'extraction des patrons morpho-syntaxiques et des relations en dépendance permet d'avoir une idée sur les thématiques principales du corpus – on voit que les élections présedentielles américaines et la crise sanitaire sont les préoccupations centrales en 2020.</p>
+      <p>Toutes les méthodes testées sont bonnes, on est seulement limité par la qualité des données de base : si l'étiquetage est erroné, on ne peut rien y faire. Sinon le choix de patrons à extraire peut aussi jouer – certaines séquences sont peu fréquentes (par exemple, le patron VERBE-ADV-ADJ ne donne pas assez de données) et ne peuvent pas donner les informations linguistiques pertinentes.</p>
+      <br />
+      <h5>Scripts et résultats</h5>
+      <p>Les programmes et les résultats obtenus pour chaque de trois rubriques sont disponibles ci-dessous. Pour télécharger, cliquez le bouton droit de la souris.</p>
+      <div class="table-responsive-sm">
+        <table class="download-table table table-hover table-bordered table-sm">
+          <thead>
+            <tr>
+              <th scope="col">Outil</th>
+              <th scope="col">Scripts et supports</th>
+              <th scope="col">3208 (À la une)</th>
+              <th scope="col">3210 (International)</th>
+              <th scope="col">3246 (Culture)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Perl</th>
+              <td>
+                <a href="./../BaO3/01_extract-patron_perl/extract_patron.pl" target="_blank">extract-patron.pl</a><br />
+                <a href="./../BaO3/01_extract-patron_perl/patrons.txt" target="_blank">patrons.txt</a><br />
+                <a href="./../BaO3/04_extract-relation_perl/extract-relation.pl" target="_blank">extract-relation.pl</a>
+              </td>
+              <td>
+                <a href="./../BaO3/01_extract-patron_perl/ADJ-NOUN_3208_pl.txt" target="_blank">patron ADJ-NOM</a><br />
+                <a href="./../BaO3/01_extract-patron_perl/NOUN-ADJ_3208_pl.txt" target="_blank">patron NOM-ADJ</a><br />
+                <a href="./../BaO3/01_extract-patron_perl/NOUN-ADP-NOUN_3208_pl.txt" target="_blank">patron NOM-PREP-NOM</a><br />
+                <a href="./../BaO3/01_extract-patron_perl/NOUN-VERB-ADJ_3208_pl.txt" target="_blank">patron NOM-VERBE-ADJ</a><br />
+                <a href="./../BaO3/01_extract-patron_perl/VERB-ADV-ADJ_3208_pl.txt" target="_blank">patron VERBE-ADV-ADJ</a><br />
+                <a href="./../BaO3/01_extract-patron_perl/VERB-DET-NOUN_3208_pl.txt" target="_blank">patron VERBE-DET-NOM</a><br />
+                <a href="./../BaO3/04_extract-relation_perl/OBJ_3208_pl.txt" target="_blank">relation OBJ</a><br />
+                <a href="./../BaO3/04_extract-relation_perl/ACL_3208_pl.txt" target="_blank">relation ACL</a><br />
+                <a href="./../BaO3/04_extract-relation_perl/FLAT-NAME_3208_pl.txt" target="_blank">relation FLAT:NAME</a>
+              </td>
+              <td>
+                <a href="./../BaO3/01_extract-patron_perl/ADJ-NOUN_3210_pl.txt" target="_blank">patron ADJ-NOM</a><br />
+                <a href="./../BaO3/01_extract-patron_perl/NOUN-ADJ_3210_pl.txt" target="_blank">patron NOM-ADJ</a><br />
+                <a href="./../BaO3/01_extract-patron_perl/NOUN-ADP-NOUN_3210_pl.txt" target="_blank">patron NOM-PREP-NOM</a><br />
+                <a href="./../BaO3/01_extract-patron_perl/NOUN-VERB-ADJ_3210_pl.txt" target="_blank">patron NOM-VERBE-ADJ</a><br />
+                <a href="./../BaO3/01_extract-patron_perl/VERB-ADV-ADJ_3210_pl.txt" target="_blank">patron VERBE-ADV-ADJ</a><br />
+                <a href="./../BaO3/01_extract-patron_perl/VERB-DET-NOUN_3210_pl.txt" target="_blank">patron VERBE-DET-NOM</a><br />
+                <a href="./../BaO3/04_extract-relation_perl/OBJ_3210_pl.txt" target="_blank">relation OBJ</a><br />
+                <a href="./../BaO3/04_extract-relation_perl/ACL_3210_pl.txt" target="_blank">relation ACL</a><br />
+                <a href="./../BaO3/04_extract-relation_perl/FLAT-NAME_3210_pl.txt" target="_blank">relation FLAT:NAME</a>
+              </td>
+              <td>
+                <a href="./../BaO3/01_extract-patron_perl/ADJ-NOUN_3246_pl.txt" target="_blank">patron ADJ-NOM</a><br />
+                <a href="./../BaO3/01_extract-patron_perl/NOUN-ADJ_3246_pl.txt" target="_blank">patron NOM-ADJ</a><br />
+                <a href="./../BaO3/01_extract-patron_perl/NOUN-ADP-NOUN_3246_pl.txt" target="_blank">patron NOM-PREP-NOM</a><br />
+                <a href="./../BaO3/01_extract-patron_perl/NOUN-VERB-ADJ_3246_pl.txt" target="_blank">patron NOM-VERBE-ADJ</a><br />
+                <a href="./../BaO3/01_extract-patron_perl/VERB-ADV-ADJ_3246_pl.txt" target="_blank">patron VERBE-ADV-ADJ</a><br />
+                <a href="./../BaO3/01_extract-patron_perl/VERB-DET-NOUN_3246_pl.txt" target="_blank">patron VERBE-DET-NOM</a><br />
+                <a href="./../BaO3/04_extract-relation_perl/OBJ_3246_pl.txt" target="_blank">relation OBJ</a><br />
+                <a href="./../BaO3/04_extract-relation_perl/ACL_3246_pl.txt" target="_blank">relation ACL</a><br />
+                <a href="./../BaO3/04_extract-relation_perl/FLAT-NAME_3246_pl.txt" target="_blank">relation FLAT:NAME</a>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">XQuery</th>
+              <td>
+                <a href="./../BaO3/02_extract-patron_xquery/extract-patron-NOM-PREP-NOM-TT.xq" target="_blank">extract-patron.xq</a><br />
+                <a href="./../BaO3/05_extract-relation_xquery/extract-relation_OBJ-UD.xq" target="_blank">extract-relation.xq</a>
+              </td>
+              <td>
+                <a href="./../BaO3/02_extract-patron_xquery/ADJ-NOM_3208_xq.txt" target="_blank">patron ADJ-NOM</a><br />
+                <a href="./../BaO3/02_extract-patron_xquery/NOM-ADJ_3208_xq.txt" target="_blank">patron NOM-ADJ</a><br />
+                <a href="./../BaO3/02_extract-patron_xquery/NOM-PRP-NOM_3208_xq.txt" target="_blank">patron NOM-PREP-NOM</a><br />
+                <a href="./../BaO3/02_extract-patron_xquery/NOM-VERBE-ADJ_3208_xq.txt" target="_blank">patron NOM-VERBE-ADJ</a><br />
+                <a href="./../BaO3/02_extract-patron_xquery/VERBE-ADV-ADJ_3208_xq.txt" target="_blank">patron VERBE-ADV-ADJ</a><br />
+                <a href="./../BaO3/02_extract-patron_xquery/VERBE-DET-NOM_3208_xq.txt" target="_blank">patron VERBE-DET-NOM</a><br />
+                <a href="./../BaO3/05_extract-relation_xquery/OBJ_3208_xq.txt" target="_blank">relation OBJ</a><br />
+                <a href="./../BaO3/05_extract-relation_xquery/ACL_3208_xq.txt" target="_blank">relation ACL</a><br />
+                <a href="./../BaO3/05_extract-relation_xquery/FLAT_3208_xq.txt" target="_blank">relation FLAT:NAME</a>
+              </td>
+              <td>
+                <a href="./../BaO3/02_extract-patron_xquery/ADJ-NOM_3210_xq.txt" target="_blank">patron ADJ-NOM</a><br />
+                <a href="./../BaO3/02_extract-patron_xquery/NOM-ADJ_3210_xq.txt" target="_blank">patron NOM-ADJ</a><br />
+                <a href="./../BaO3/02_extract-patron_xquery/NOM-PRP-NOM_3210_xq.txt" target="_blank">patron NOM-PREP-NOM</a><br />
+                <a href="./../BaO3/02_extract-patron_xquery/NOM-VERBE-ADJ_3210_xq.txt" target="_blank">patron NOM-VERBE-ADJ</a><br />
+                <a href="./../BaO3/02_extract-patron_xquery/VERBE-ADV-ADJ_3210_xq.txt" target="_blank">patron VERBE-ADV-ADJ</a><br />
+                <a href="./../BaO3/02_extract-patron_xquery/VERBE-DET-NOM_3210_xq.txt" target="_blank">patron VERBE-DET-NOM</a><br />
+                <a href="./../BaO3/05_extract-relation_xquery/OBJ_3210_xq.txt" target="_blank">relation OBJ</a><br />
+                <a href="./../BaO3/05_extract-relation_xquery/ACL_3210_xq.txt" target="_blank">relation ACL</a><br />
+                <a href="./../BaO3/05_extract-relation_xquery/FLAT_3210_xq.txt" target="_blank">relation FLAT</a>
+              </td>
+              <td>
+                <a href="./../BaO3/02_extract-patron_xquery/ADJ-NOM_3246_xq.txt" target="_blank">patron ADJ-NOM</a><br />
+                <a href="./../BaO3/02_extract-patron_xquery/NOM-ADJ_3246_xq.txt" target="_blank">patron NOM-ADJ</a><br />
+                <a href="./../BaO3/02_extract-patron_xquery/NOM-PRP-NOM_3246_xq.txt" target="_blank">patron NOM-PREP-NOM</a><br />
+                <a href="./../BaO3/02_extract-patron_xquery/NOM-VERBE-ADJ_3246_xq.txt" target="_blank">patron NOM-VERBE-ADJ</a><br />
+                <a href="./../BaO3/02_extract-patron_xquery/VERBE-ADV-ADJ_3246_xq.txt" target="_blank">patron VERBE-ADV-ADJ</a><br />
+                <a href="./../BaO3/02_extract-patron_xquery/VERBE-DET-NOM_3246_xq.txt" target="_blank">patron VERBE-DET-NOM</a><br />
+                <a href="./../BaO3/05_extract-relation_xquery/OBJ_3246_xq.txt" target="_blank">relation OBJ</a><br />
+                <a href="./../BaO3/05_extract-relation_xquery/ACL_3246_xq.txt" target="_blank">relation ACL</a><br />
+                <a href="./../BaO3/05_extract-relation_xquery/FLAT_3246_xq.txt" target="_blank">relation FLAT:NAME</a>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">XSLT</th>
+              <td>
+                <a href="./../BaO3/03_extract-patron_xslt/extract-patron_NOM-PREP-NOM-TT.xsl" target="_blank">extract-patron.xsl</a><br />
+                <a href="./../BaO3/06_extract-relation_xslt/extract-relation_OBJ-UD.xsl" target="_blank">extract-relation.xsl</a>
+              </td>
+              <td>
+                <a href="./../BaO3/03_extract-patron_xslt/ADJ-NOM_3208_xsl.txt" target="_blank">patron ADJ-NOM</a><br />
+                <a href="./../BaO3/03_extract-patron_xslt/NOM-ADJ_3208_xsl.txt" target="_blank">patron NOM-ADJ</a><br />
+                <a href="./../BaO3/03_extract-patron_xslt/NOM-PREP-NOM_3208_xsl.txt" target="_blank">patron NOM-PREP-NOM</a><br />
+                <a href="./../BaO3/03_extract-patron_xslt/NOM-VERBE-ADJ_3208_xsl.txt" target="_blank">patron NOM-VERBE-ADJ</a><br />
+                <a href="./../BaO3/03_extract-patron_xslt/VERBE-ADV-ADJ_3208_xsl.txt" target="_blank">patron VERBE-ADV-ADJ</a><br />
+                <a href="./../BaO3/03_extract-patron_xslt/VERBE-DET-NOM_3208_xsl.txt" target="_blank">patron VERBE-DET-NOM</a><br />
+                <a href="./../BaO3/06_extract-relation_xslt/OBJ_3208_xsl.txt" target="_blank">relation OBJ</a><br />
+                <a href="./../BaO3/06_extract-relation_xslt/ACL_3208_xsl.txt" target="_blank">relation ACL</a><br />
+                <a href="./../BaO3/06_extract-relation_xslt/FLAT_3208_xsl.txt" target="_blank">relation FLAT:NAME</a>
+              </td>
+              <td>
+                <a href="./../BaO3/03_extract-patron_xslt/ADJ-NOM_3210_xsl.txt" target="_blank">patron ADJ-NOM</a><br />
+                <a href="./../BaO3/03_extract-patron_xslt/NOM-ADJ_3210_xsl.txt" target="_blank">patron NOM-ADJ</a><br />
+                <a href="./../BaO3/03_extract-patron_xslt/NOM-PREP-NOM_3210_xsl.txt" target="_blank">patron NOM-PREP-NOM</a><br />
+                <a href="./../BaO3/03_extract-patron_xslt/NOM-VERBE-ADJ_3210_xsl.txt" target="_blank">patron NOM-VERBE-ADJ</a><br />
+                <a href="./../BaO3/03_extract-patron_xslt/VERBE-ADV-ADJ_3210_xsl.txt" target="_blank">patron VERBE-ADV-ADJ</a><br />
+                <a href="./../BaO3/03_extract-patron_xslt/VERBE-DET-NOM_3210_xsl.txt" target="_blank">patron VERBE-DET-NOM</a><br />
+                <a href="./../BaO3/06_extract-relation_xslt/OBJ_3210_xsl.txt" target="_blank">relation OBJ</a><br />
+                <a href="./../BaO3/06_extract-relation_xslt/ACL_3210_xsl.txt" target="_blank">relation ACL</a><br />
+                <a href="./../BaO3/06_extract-relation_xslt/FLAT_3210_xsl.txt" target="_blank">relation FLAT:NAME</a>
+              </td>
+              <td>
+                <a href="./../BaO3/03_extract-patron_xslt/ADJ-NOM_3246_xsl.txt" target="_blank">patron ADJ-NOM</a><br />
+                <a href="./../BaO3/03_extract-patron_xslt/NOM-ADJ_3246_xsl.txt" target="_blank">patron NOM-ADJ</a><br />
+                <a href="./../BaO3/03_extract-patron_xslt/NOM-PREP-NOM_3246_xsl.txt" target="_blank">patron NOM-PREP-NOM</a><br />
+                <a href="./../BaO3/03_extract-patron_xslt/NOM-VERBE-ADJ_3246_xsl.txt" target="_blank">patron NOM-VERBE-ADJ</a><br />
+                <a href="./../BaO3/03_extract-patron_xslt/VERBE-ADV-ADJ_3246_xsl.txt" target="_blank">patron VERBE-ADV-ADJ</a><br />
+                <a href="./../BaO3/03_extract-patron_xslt/VERBE-DET-NOM_3246_xsl.txt" target="_blank">patron VERBE-DET-NOM</a><br />
+                <a href="./../BaO3/06_extract-relation_xslt/OBJ_3246_xsl.txt" target="_blank">relation OBJ</a><br />
+                <a href="./../BaO3/06_extract-relation_xslt/ACL_3246_xsl.txt" target="_blank">relation ACL</a><br />
+                <a href="./../BaO3/06_extract-relation_xslt/FLAT_3246_xsl.txt" target="_blank">relation FLAT:NAME</a>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">Python</th>
+              <td>
+                <a href="./../BaO3/07_python/extract-patron.py" target="_blank">extract-patron.py</a><br />
+                <a href="./../BaO3/07_python/patrons.txt" target="_blank">patrons.txt</a><br />
+                <a href="./../BaO3/07_python/extract-relation.py" target="_blank">extract-relation.py</a><br />
+                <a href="./../BaO3/07_python/relations.txt" target="_blank">relations.txt</a>
+              </td>
+              <td>
+                <a href="./../BaO3/07_python/ADJ-NOUN_3208_py.txt" target="_blank">patron ADJ-NOM</a><br />
+                <a href="./../BaO3/07_python/NOUN-ADJ_3208_py.txt" target="_blank">patron NOM-ADJ</a><br />
+                <a href="./../BaO3/07_python/NOUN-ADP-NOUN_3208_py.txt" target="_blank">patron NOM-PREP-NOM</a><br />
+                <a href="./../BaO3/07_python/NOUN-VERB-ADJ_3208_py.txt" target="_blank">patron NOM-VERBE-ADJ</a><br />
+                <a href="./../BaO3/07_python/VERB-ADV-ADJ_3208_py.txt" target="_blank">patron VERBE-ADV-ADJ</a><br />
+                <a href="./../BaO3/07_python/VERB-DET-NOUN_3208_py.txt" target="_blank">patron VERBE-DET-NOM</a><br />
+                <a href="./../BaO3/07_python/obj_3208_py.txt" target="_blank">relation OBJ</a><br />
+                <a href="./../BaO3/07_python/acl_3210_py.txt" target="_blank">relation ACL</a><br />
+                <a href="./../BaO3/07_python/flat-name_3208_py.txt" target="_blank">relation FLAT:NAME</a>
+              </td>
+              <td>
+                <a href="./../BaO3/07_python/ADJ-NOUN_3210_py.txt" target="_blank">patron ADJ-NOM</a><br />
+                <a href="./../BaO3/07_python/NOUN-ADJ_3210_py.txt" target="_blank">patron NOM-ADJ</a><br />
+                <a href="./../BaO3/07_python/NOUN-ADP-NOUN_3210_py.txt" target="_blank">patron NOM-PREP-NOM</a><br />
+                <a href="./../BaO3/07_python/NOUN-VERB-ADJ_3210_py.txt" target="_blank">patron NOM-VERBE-ADJ</a><br />
+                <a href="./../BaO3/07_python/VERB-ADV-ADJ_3210_py.txt" target="_blank">patron VERBE-ADV-ADJ</a><br />
+                <a href="./../BaO3/07_python/VERB-DET-NOUN_3210_py.txt" target="_blank">patron VERBE-DET-NOM</a><br />
+                <a href="./../BaO3/07_python/obj_3210_py.txt" target="_blank">relation OBJ</a><br />
+                <a href="./../BaO3/07_python/acl_3210_py.txt" target="_blank">relation ACL</a><br />
+                <a href="./../BaO3/07_python/flat-name_3210_py.txt" target="_blank">relation FLAT:NAME</a>
+              </td>
+              <td>
+                <a href="./../BaO3/07_python/ADJ-NOUN_3246_py.txt" target="_blank">patron ADJ-NOM</a><br />
+                <a href="./../BaO3/07_python/NOUN-ADJ_3246_py.txt" target="_blank">patron NOM-ADJ</a><br />
+                <a href="./../BaO3/07_python/NOUN-ADP-NOUN_3246_py.txt" target="_blank">patron NOM-PREP-NOM</a><br />
+                <a href="./../BaO3/07_python/NOUN-VERB-ADJ_3246_py.txt" target="_blank">patron NOM-VERBE-ADJ</a><br />
+                <a href="./../BaO3/07_python/VERB-ADV-ADJ_3246_py.txt" target="_blank">patron VERBE-ADV-ADJ</a><br />
+                <a href="./../BaO3/07_python/VERB-DET-NOUN_3246_py.txt" target="_blank">patron VERBE-DET-NOM</a><br />
+                <a href="./../BaO3/07_python/obj_3246_py.txt" target="_blank">relation OBJ</a><br />
+                <a href="./../BaO3/07_python/acl_3246_py.txt" target="_blank">relation ACL</a><br />
+                <a href="./../BaO3/07_python/flat-name_3246_py.txt" target="_blank">relation FLAT:NAME</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- Conclusion Section -->
+
+  <section class="colored-section" id="conclusion">
+
+    <div class="container-fluid">
+
+      <div class="presentation">
+        <h2 "big-heading">Conclusion</h2>
+        <p>Dans la première partie de ce projet, nous avons construit une boîte à outils qui génère un corpus à partir des fils RSS dans deux formats : TXT et XML. Nous avons aussi testé deux méthodes d'extraction de données textuelles différentes,
+        donc nous pouvons constater que la version pure Perl est meilleure. Non seulement la version du script avec les expressions régulières nous semble plus claire intuitivement, elle est aussi la plus rapide. En plus, pour pouvoir utiliser le
+        module XML::RSS il faut étudier la documentation qui n'est pas toujours facile à prendre en main.</p>
+        <p>Dans la deuxième partie du projet nous avons repris le script de la première boîte à outils (celui avec la méthode pure Perl puisque elle est plus rapide) et nous l'avons completé de telle façon qu'il puisse étiqueter les données textuelles, une fois extraites. Nous avons testé 2 étiqueteurs différents : TreeTagger, l'étiqueteur en POS ; UDPipe, l'étiqueteur syntaxique. Le traitement s'est avéré un peu long, en moyenne 4 minutes (sur ma machine, bien entendu). Comme résultat, nous avons obtenu des fichiers étiquetés par TreeTagger en format XML et des fichiers étiquetés par UDPipe en format CoNLL. Pour ensuite extraire les relations syntaxiques des sorties UDPipe avec certains outils, nous avons converti les fichiers CoNLL en format XML.</p>
+        <p>Dans la troisième partie du projet, on a expérimenté divers outils d'extraction des informations à partir des données étiquetées dans la boîte à outil précedente afin de pouvoir étudier les terminologies du corpus et les analyser. On a constaté que les 4 méthodes font bien le travail, la seule limitation ici, c'est la qualité de données d'entrée, donc des fichiers étiquetés. On a obtenu quand même quelques résultats éronnés, mais c'est la responsabilité des outils d'étiquetage. Enfin, on a conclu que les sujets les plus discutés en année 2020, en tout cas dans le journal Le Monde, sont la crise sanitaire suite du Covid-19 et les élections présidentielles aux États-Unis. On a egalement constaté, qu'entre rubriques « À la une » et « International » il y a beaucoup de choses en commun, tandis que la rubrique « Culture » reste un peu à part. </p>
+        <p>Ce que j’ai trouvé particulièrement amusant, c'est de créer ce site. Pendant les travaux sur le premier Projet Encadré, j’ai eu l’opportunité de me familiariser avec les bases du web : HTML et CSS (la structure et le style de web-pages). Ce semestre je voulais améliorer le site du premier semestre et essayer de voir les bases de JavaScript afin de rendre mon site un peu plus dynamique. Ce plan s’est avéré trop ambitieux avec un programme aussi intense, mais j’ai quand même réussi à apprendre un peu plus. Notamment, j’ai découvert divers ressources très utiles :
+          <ul>
+            <li><a class="text-light" href="https://getbootstrap.com/" target="_blank">Framework Bootstrap</a>,  une collection d'outils utiles à la création du design de sites (j’ai utilisé v4.6)
+            <li><a class="text-light" href="https://fontawesome.com/" target="_blank">Font Awesome</a>, une collection d'icônes</li>
+            <li><a class="text-light" href="https://fonts.google.com/" target="_blank">Google Fonts</a>, une collection gratuite de polices d'écritures</li>
+            <li><a class="text-light" href="https://highlightjs.org/" target="_blank">Highlight.js</a>, un surligneur de syntaxe écrit en JavaScript</li>
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- Tools Section -->
+
+  <section class="white-section" id="tools">
+
+    <div class="container-fluid">
+
+      <div class="row">
+        <div class="feature-box col-lg-4">
+          <center><i class="icon fas fa-code fa-4x fa-fw"></i></center>
+        <center>  <h3 class="feature-title">XQuery – XSLT</h3></center>
+          <p><i class="fas fa-plus"></i> Propose les solutions pour l'extraction d'informations les plus courtes et faciles à prendre en main (en tout cas pour moi).</p>
+          <p><i class="fas fa-minus"></i> Un peu dépassé, plus beaucoup utilisé vu que le format XML est moins populaire aujourd'hui que les autres formats de structuration de données (par exemple, json).</p>
+        </div>
+
+        <div class="feature-box col-lg-4">
+          <center><i class="icon far fa-file-code fa-4x fa-fw"></i></center>
+          <center><h3 class="feature-title">Perl</h3></center>
+          <p><i class="fas fa-plus"></i> Très puissant quand il s'agit des expressions regulières !</p>
+          <p><i class="fas fa-plus"></i> Possible de traiter divers formats, XML et CoNLL y compris.</p>
+          <p><i class="fas fa-minus"></i> Beaucoup moins de documentations et guidelines disponibles en ligne que pour Python.</p>
+          <p><i class="fas fa-minus"></i> Nécessite la conversion de la sortie UDPipe en format XML.</p>
+        </div>
+
+        <div class="feature-box col-lg-4">
+          <center><i class="icon fab fa-python fa-4x"></i></center>
+          <center><h3 class="feature-title">Python</h3></center>
+          <p><i class="fas fa-plus"></i> Pas besoin de reformater les fichiers CoNLL en XML – on peut en fait travailler sur tous les formats si on le veut ! </p>
+          <p><i class="fas fa-plus"></i> Il existe une alternative à la bibliotèque Pyconll – <a class="text-info" href="https://pypi.org/project/conllu/" target="_blank">CoNLL-U</a>.</p>
+          <p><i class="fas fa-minus"></i> Nécessaire d'étudier la documentation pour pouvoir utiliser les bibliotèques.</p>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- Footer -->
+
+  <footer class="white-section" id="footer">
+    <div class="container-fluid">
+      <a class="text-dark" href="https://www.linkedin.com/in/alexandra-ponomareva-22228710b/" target="_blank"><i class="social-icon fab fa-linkedin"></i></a>
+      <a class="text-dark" href="mailto:alex.ponomaryova@gmail.com" target="_blank"><i class="social-icon fas fa-envelope"></i></a>
+      <p>© 2021 Alexandra Ponomareva </p>
+    </div>
+  </footer>
+
+
+</body>
+
+</html>
